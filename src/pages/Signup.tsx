@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { signupUser } from "../api/auth"
 import { Button, Container, Form } from "react-bootstrap"
+import '../styles/Signup.css';
 
 export default function SignupPage() {
     const [name, setName] = useState('')
@@ -19,35 +20,37 @@ export default function SignupPage() {
     }
 
     return (
-        <Container className="mt-5">
-            <h2>Crie sua conta!</h2>
-            <Form>
-                <Form.Group className="mb-3">
-                    <Form.Label>Nome</Form.Label>
-                    <Form.Control type="text"
-                                    placeholder="Digite seu nome"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}>
-                    </Form.Control>
+        <Container fluid className="body">
+            <Container className="form-container">
+                <h2 className="headline">Crie sua conta!</h2>
+                <Form>
                     <Form.Group className="mb-3">
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email"
-                                        placeholder="Digite seu email"
-                                        value={email}
-                                        onChange={(e) => setEmail(e.target.value)}>
+                        <Form.Label className="text">Nome</Form.Label>
+                        <Form.Control className="placeholder-text" type="text"
+                                        placeholder="Digite seu nome"
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}>
                         </Form.Control>
+                        <Form.Group className="mb-3">
+                            <Form.Label className="text">Email</Form.Label>
+                            <Form.Control className="placeholder-text" type="email"
+                                            placeholder="Digite seu email"
+                                            value={email}
+                                            onChange={(e) => setEmail(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label className="text">Senha</Form.Label>
+                            <Form.Control className="placeholder-text" type="password"
+                                            placeholder="Digite sua senha"
+                                            value={password}
+                                            onChange={(e) => setPassword(e.target.value)}>
+                            </Form.Control>
+                        </Form.Group>
                     </Form.Group>
-                    <Form.Group className="mb-3">
-                        <Form.Label>Senha</Form.Label>
-                        <Form.Control type="password"
-                                        placeholder="Digite sua senha"
-                                        value={password}
-                                        onChange={(e) => setPassword(e.target.value)}>
-                        </Form.Control>
-                    </Form.Group>
-                </Form.Group>
-                <Button variant="primary" onClick={handleSignup}>Registrar</Button>
-            </Form>
+                    <Button variant="primary" onClick={handleSignup}>Registrar</Button>
+                </Form>
+            </Container>
         </Container>
     )
 }
