@@ -31,6 +31,7 @@ export default function SignupPage() {
                                         value={name}
                                         onChange={(e) => setName(e.target.value)}>
                         </Form.Control>
+                    </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label className="text">Email</Form.Label>
                             <Form.Control className="placeholder-text" type="email"
@@ -47,8 +48,7 @@ export default function SignupPage() {
                                             onChange={(e) => setPassword(e.target.value)}>
                             </Form.Control>
                         </Form.Group>
-                    </Form.Group>
-                    <Button variant="primary" onClick={handleSignup}>Registrar</Button>
+                    <Button className="register-btn" onClick={handleSignup}>Registrar</Button>
                 </Form>
             </Container>
         </Container>
