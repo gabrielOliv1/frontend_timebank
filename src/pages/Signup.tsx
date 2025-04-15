@@ -29,7 +29,7 @@ export default function SignupPage() {
         <Container fluid className="body">
             <Container className="form-container">
                 <Container className="upper-container">
-                    <img style={{ width: "100%", height: "44px"}}src={timebank} alt="Timebank logo" />
+                    <img style={{ width: "100%", height: "60px"}}src={timebank} alt="Timebank logo" />
                     <h2 className="headline">Crie sua conta!</h2>
                 </Container>
                 <Form>
