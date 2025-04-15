@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { signupUser } from "../api/auth"
 import { Button, Container, Form } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import '../styles/Signup.css';
 import linkedinIcon from '../assets/Linkedin.svg';
 import facebookIcon from '../assets/Facebook.svg';
@@ -60,6 +61,10 @@ export default function SignupPage() {
                     </Container>
                     <Button className="register-btn" onClick={handleSignup}>Registrar</Button>
                 </Form>
+                <Container className="container-login mt-2">
+                    <p>Já tem uma conta?</p>
+                    <Link to="/login" className="login-link">Faça <span className="login-text">login.</span></Link>
+                </Container>
             </Container>
         </Container>
     )

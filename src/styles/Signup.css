@@ -79,3 +79,23 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }   
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    color: var(--grey);
+    font-size: smaller;
+    font-family: 'Inter', sans-serif;
+}
+
+.login-link {
+    text-decoration: none;
+    color: var(--grey);
+    display: flex;
+}
+
+.login-text {
+    color: var(--azure);
+    margin-left: 3px;
+}
