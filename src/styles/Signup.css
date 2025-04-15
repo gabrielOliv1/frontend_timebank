@@ -32,6 +32,24 @@
     color: var(--darker-grey);
 }
 
+.social-icons-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
 .register-btn {
     width: 100%;
     font-size: 20px;
