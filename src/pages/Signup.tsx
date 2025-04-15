@@ -7,6 +7,7 @@ import linkedinIcon from '../assets/Linkedin.svg';
 import facebookIcon from '../assets/Facebook.svg';
 import githubIcon from '../assets/Github.svg';
 import instagramIcon from '../assets/Instagram.svg';
+import timebank from '../assets/Timebank.svg';
 
 export default function SignupPage() {
     const [name, setName] = useState('')
@@ -27,7 +28,10 @@ export default function SignupPage() {
     return (
         <Container fluid className="body">
             <Container className="form-container">
-                <h2 className="headline">Crie sua conta!</h2>
+                <Container className="upper-container">
+                    <img style={{ width: "100%", height: "44px"}}src={timebank} alt="Timebank logo" />
+                    <h2 className="headline">Crie sua conta!</h2>
+                </Container>
                 <Form>
                     <Form.Group className="mb-3">
                         <Form.Label className="text">Nome</Form.Label>
