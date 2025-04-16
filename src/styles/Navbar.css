@@ -1,0 +1,11 @@
+.btn-outline-secondary {
+    color: var(--grey);
+    border-color: var(--grey);
+    font-weight: 300;
+}
+
+.btn-outline-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--grey);
+    border-color: var(--medium-slate-blue)
+}

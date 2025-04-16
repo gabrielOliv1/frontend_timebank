@@ -1,18 +1,20 @@
 import SignupForm from "../components/SignupForm";
-import { Container, Navbar } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import pairProgramming from '../assets/Pair-programming.svg';
+import NavbarComponent from "../components/Navbar";
 
 export default function SignupPage() {
     return (
-        <Container fluid style={{ display: "flex", flexDirection: "column", gap: "76px" }}>
-            <Navbar />
+        <Container fluid style={{ display: "flex", flexDirection: "column" }}>
+            <NavbarComponent />
             <div style={{ 
                 display: "flex", 
                 flexDirection: "row",
                 justifyContent: "space-between",
                 alignItems: "center",
                 width: "100%",
-                padding: "2rem"
+                padding: "2rem",
+                marginTop: "76px"
             }}>
                 <img 
                     style={{ 
