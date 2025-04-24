@@ -1,0 +1,19 @@
+.headline, h5 {
+    color: var(--grey);
+}
+
+.service-board {
+    background-color: var(--night);
+    border: double 1px transparent;
+    border-radius: 6px;
+    background-image: linear-gradient(var(--night), var(--night)), 
+                     linear-gradient(to bottom, var(--azure), var(--medium-slate-blue));
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        display: none;
+    }
+}

@@ -2,6 +2,7 @@ import SignupForm from "../components/SignupForm";
 import { Container } from "react-bootstrap";
 import pairProgramming from '../assets/Pair-programming.svg';
 import NavbarComponent from "../components/Navbar";
+import Services from "../components/Services";
 
 export default function SignupPage() {
     return (
@@ -27,6 +28,7 @@ export default function SignupPage() {
                 />
                 <SignupForm />
             </div>
+            <Services />
         </Container>
     )
 }
