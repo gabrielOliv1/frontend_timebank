@@ -1,34 +1,55 @@
-import SignupForm from "../components/SignupForm";
-import { Container } from "react-bootstrap";
-import pairProgramming from '../assets/Pair-programming.svg';
-import NavbarComponent from "../components/Navbar";
-import Services from "../components/Services";
+import { Logo } from "../styles/components/Logo"
+import { SignupForm } from "../styles/components/SignupForm"
+import "../styles/Signup.css"
+import "../styles/colors.css"
+import { SignupButton } from "../styles/components/SignupButton"
+import { SocialLogos } from "../styles/components/SocialLogos"
+import { useState } from "react"
+import { signupUser } from "../api/auth"
 
-export default function SignupPage() {
+export const Signup = () => {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleSignup = async (e: React.FormEvent) => {
+        e.preventDefault()
+        console.log('Dados sendo enviados: ', {name, email, password})
+        try {
+            const data =await signupUser(name, email, password)
+            alert('Usuário registrado com sucesso!')
+
+            console.log(data)
+        } catch (error) {
+            alert('Erro ao registrar usuário. Por favor, tente novamente.')
+        }
+    }
+
     return (
-        <Container fluid style={{ display: "flex", flexDirection: "column" }}>
-            <NavbarComponent />
-            <div style={{ 
-                display: "flex", 
-                flexDirection: "row",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "100%",
-                padding: "2rem",
-                marginTop: "76px"
-            }}>
-                <img 
-                    style={{ 
-                        maxWidth: "219px",
-                        height: "auto",
-                        objectFit: "contain"
-                    }}
-                    src={pairProgramming} 
-                    alt="Pair Programming" 
-                />
-                <SignupForm />
+        <div className="main-container">
+            <section className="headline" style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px" }}>
+                <div className="logo-container" style={{ height: "44px" }}>
+                    <Logo />
+                </div>
+                <h1 className="main-text"
+                    style={{ color: "var(--grey)", fontWeight: "bold", fontSize: "18px", margin: 0 }}>
+                    Crie sua conta!
+                </h1>
+            </section>
+            <SignupForm 
+                onSubmit={handleSignup}
+                name={name} setName={setName}
+                email={email} setEmail={setEmail}
+                password={password} setPassword={setPassword}
+            />
+            <SocialLogos />
+            <div className="signup-btn-container">
+                <SignupButton onClick={handleSignup}/>
+                <div className="login-redirect">
+                    <p className="login-text">Já possui uma conta? Faça</p>
+                    <a className="login-link" href="/login">login</a>
+                </div>
             </div>
-            <Services />
-        </Container>
+        </div>
     )
 }

@@ -1,102 +1,43 @@
-.form-container {
-    padding: 2rem;
-    width: 100%;
-    max-width: 500px;
-}
-
-.upper-container {
+.main-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 14px;
-    margin-bottom: 40px;
+
+    max-width: 14.375rem;
+    max-height: 440px;
+
+    gap: 30px;
 }
 
-.headline {
-    font-weight: bold;
-    color: #D9D9D9;
-    text-align: center;
-}
-
-.text {
-    color: var(--grey);
-}
-
-.placeholder-text::placeholder {
-    color: var(--darker-grey);
-}
-
-
-.form-control {
-    box-shadow: none !important;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: rgba(255, 255, 255, 0.05);
-    color: var(--grey) !important;
-}
-
-.form-control:focus {
-    box-shadow: none !important;
-    border-color: #7C54F0;
-    background-color: rgba(255, 255, 255, 0.08);
-    color: var(--grey) !important;
-}
-
-.social-icons-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-}
-
-.social-icon {
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.social-icon:hover {
-    transform: scale(1.1);
-}
-
-.register-btn {
-    width: 100%;
-    font-size: 20px;
-    color: white;
-    background: linear-gradient(to bottom, #7C54F0, #4380F5);
-    border: none;
-    padding: 10px 0;
-    transition: all 0.3s ease;
-}
-
-.register-btn:hover {
-    background: linear-gradient(to bottom, #6A43D7, #326FD4);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}   
-
-.container-login {
+.signup-btn-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.signup-btn-container p {
+    font-size: 12px;
+    font-weight: 100;
+    color: var(--white);
+}
+
+.login-redirect {
+    display: flex;
+    align-items: center;
     gap: 2px;
-    color: var(--grey);
-    font-size: smaller;
-    font-weight: 200;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--white);
 }
 
 .login-link {
-    text-decoration: none;
-    color: var(--grey);
-    display: flex;
-}
-
-.login-text {
     color: var(--azure);
-    margin-left: 3px;
-}
-
-@media (min-width: 744px) {
-    .form-container {
-        max-width: 356px;
-    }
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
 }
